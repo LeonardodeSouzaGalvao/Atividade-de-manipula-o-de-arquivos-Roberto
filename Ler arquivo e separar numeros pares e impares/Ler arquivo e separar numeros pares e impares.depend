@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1714217813 source:c:\users\leoga\desktop\pdfs puc minas\programas c\ler arquivo e separar numeros pares e impares\main.c
+	<stdio.h>
+	<stdlib.h>
+
