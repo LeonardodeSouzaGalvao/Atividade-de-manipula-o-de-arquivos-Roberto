@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1714222140 source:c:\users\leoga\desktop\pdfs puc minas\programas c\ler a lista de numeros e fazer outro arquivo so com os numeros primos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+

@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL,"portuguese");
+    FILE*arquivof,*primos;
+    long long int numbers;
+    int primo=1;
+
+    arquivof = fopen("numeros.txt","r");
+    if(arquivof == NULL)
+    {
+        printf("Erro, arquivo de leitura não encontrado!");
+    }
+
+    primos = fopen("primos.txt","w");
+    if(primos == NULL)
+    {
+        printf("Erro, arquivo de escrita não encontrado!");
+    }
+
+    else
+    {
+        while(fscanf(arquivof,"%lld\n", &numbers)==1)
+        {
+            primo=1;
+            if (numbers <= 1)
+            {
+                continue;
+            }
+            else
+            {
+                for (int i = 2; i <= numbers / 2; i++)
+                {
+
+                    if (numbers % i == 0)
+                    {
+                        primo = 0;
+                        break;
+                    }
+
+                }
+
+                if(primo ==1){
+                    fprintf(primos,"%lld\n",numbers);
+
+                }
+
+            }
+
+        }
+        fclose(arquivof);
+        fclose(primos);
+        printf("Operação  concluida");
+
+
+
+    }
+    return 0;
+}
